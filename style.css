@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700;800&display=swap');
+
+* {
+  user-select: none;
+  overflow: hidden;
+  font-family: "Montserrat";
+  color: black;
+
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+}
+
+#main {
+  position: absolute;
+  display: flex;
+  top: -2%;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  animation: slide 1s;
+  overflow: visible;
+}
+
+#attackers {
+  margin: 5%;
+}
+
+#defenders {
+  margin: 5%;
+}
+
+.mafiaName {
+  font-weight: 600;
+  font-size: large;
+}
+
+.mafiaScore {
+  font-weight: 500;
+  font-size: medium;
+}
+
+#timer {
+  font-weight: 500;
+  font-size: 90%;
+  /* font-size: medium; */
+  padding-top: 3%;
+}
+
+#timer p {
+  font-size: 60%;
+  margin-top: -30%;
+}
+
+#timer h1 {
+  color: transparent;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: white;
+  animation: popUp 5s;
+  overflow: visible;
+}
+
+#timer i {
+  overflow: visible;
+  font-size: 80%;
+}
+
+#playerScores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5%;
+  font-size: 110%;
+}
+
+.radiusColor {
+  position: absolute;
+  /* top: -70%; */
+  margin-top: -5%;
+  margin-left: 4%;
+  /* left: 44%; */
+  filter: blur(50px);
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  opacity: 0;
+  z-index: -1;
+}
